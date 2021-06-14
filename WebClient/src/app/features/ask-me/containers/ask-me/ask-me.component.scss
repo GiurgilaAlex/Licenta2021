@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.ask-me-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .upper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    .title {
+      color: #3F51B5;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+
+    .mic-button {
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      .mic-icon {
+        height: 50px;
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+agm-map {
+  height: 100%;
+  width: 100%;
+}
+
+.answer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}

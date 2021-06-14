@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+
+  .welcome-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .welcome-message-text {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title {
+      color: #3F51B5;
+    }
+
+    .logo {
+      height: 100px;
+      width: 100px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+
+  .footer-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+agm-map {
+  height: 300px;
+}

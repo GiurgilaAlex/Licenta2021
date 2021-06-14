@@ -1,0 +1,21 @@
+<div class="notes-container"
+     *ngIf="notes?.length > 0">
+  <app-note-card *ngFor="let note of notes"
+                 [note]="note"
+                 (onClick)="goToDetails($event)">
+  </app-note-card>
+</div>
+
+<div class="no-notes"
+     *ngIf="notes?.length === 0">
+  <img class="no-notes-icon"
+       [src]="'assets/icons/no-notes.svg'">
+  <div class="no-notes-desciption">It seems that you don't have any notes yes. Press the "+" button to add one.</div>
+</div>
+
+<button mat-fab
+        color="primary"
+        class="add-button"
+        (click)="goToDetails(null)">
+  <mat-icon class="add-icon">add</mat-icon>
+</button>

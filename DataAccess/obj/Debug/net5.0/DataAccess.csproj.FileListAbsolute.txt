@@ -1,0 +1,15 @@
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\DataAccess.dll
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+H:\Licenta 2021\Licenta2021\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.dll
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+H:\Licenta 2021\Licenta2021\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
