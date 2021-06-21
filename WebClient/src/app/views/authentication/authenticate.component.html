@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="welcome-message">
+    <img class="logo"
+         [src]="'assets/icons/logo.svg'">
+    <h1 class="welcome-message-text title">
+      {{'welcomeToMnemosyne' | translate}}
+    </h1>
+    <div class="welcome-message-text description">
+    </div>
+  </div>
+
+  <div class="input-card">
+    <mat-card>
+      <mat-card-title>
+        {{isOnRegisterPage ? ('register' | translate) : ('login' | translate)}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        <mat-error *ngIf="loginInvalid">
+          {{'somethingWentWrong' | translate}}
+        </mat-error>
+      </mat-card-subtitle>
+      <mat-card-content>
+        <form class="form"
+              [formGroup]="form"
+              (ngSubmit)="onSubmit()">
+          <mat-form-field class="full-width">
+            <input matInput
+                   [placeholder]="'Email'"
+                   formControlName="email"
+                   required>
+            <mat-error>{{'required' | translate}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <input matInput
+                   placeholder="{{'password' | translate}}"
+                   type="password"
+                   formControlName="password"
+                   required>
+            <mat-error>{{'required' | translate}}</mat-error>
+          </mat-form-field>
+          <button mat-raised-button
+                  color="primary">
+            {{isOnRegisterPage ? ('register' | translate) : ('login' | translate)}}
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <div class="footer-buttons-container">
+    <button mat-raised-button
+            (click)="switchPage()">
+      {{isOnRegisterPage ? ('back' | translate) : ('donthaveAccount' | translate)}}
+    </button>
+    <mat-button-toggle-group (change)="changeLanguage($event)">
+      <mat-button-toggle value="ro">
+        <span class="flag-icon flag-icon-ro"></span>
+      </mat-button-toggle>
+      <mat-button-toggle value="en"
+                         checked="true">
+        <span class="flag-icon flag-icon-gb"></span>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>

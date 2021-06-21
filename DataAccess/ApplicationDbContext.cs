@@ -9,6 +9,8 @@ namespace DataAccess
     {
         public DbSet<Note> Notes { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -18,6 +20,7 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.ApplyConfiguration(new ProfileConfiguration());
             builder.ApplyConfiguration(new NoteConfiguration());
             builder.ApplyConfiguration(new LocationConfiguration());
         }

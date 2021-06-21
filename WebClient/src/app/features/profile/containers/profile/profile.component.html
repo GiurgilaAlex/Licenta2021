@@ -1,0 +1,67 @@
+<mat-card class="card-container">
+  <mat-card-title>{{'profile' | translate}}</mat-card-title>
+  <form class="form"
+        [formGroup]="form">
+    <mat-form-field class="full-width">
+      <input matInput
+             placeholder="{{'name' | translate}}"
+             formControlName="name"
+             required>
+      <mat-error>{{'required' | translate}}</mat-error>
+    </mat-form-field>
+
+    <div class="photo-buttons">
+      <button mat-stroked-button
+              onclick="document.querySelector('#input-file').click()">
+        {{'choosePhoto' | translate}}
+      </button>
+      <button mat-raised-button
+              color="warn"
+              [disabled]="!photoSelected"
+              (click)="removePhoto()">
+        {{'removePhoto' | translate}}
+      </button>
+    </div>
+
+    <div class="add-image">
+      <input #file
+             type="file"
+             id="input-file"
+             multiple
+             style="display: none"
+             (change)="preview(file.files)" />
+      <div class="image-container">
+        <img [src]="imgURL ? imgURL : 'assets/icons/no-photo.svg'"
+             height="200">
+        <div class="no-image-text"
+             *ngIf="!imgURL">
+          {{'noPhotoMessage' | translate}}
+        </div>
+      </div>
+    </div>
+
+    <mat-button-toggle-group (change)="changeLanguage($event)">
+      <mat-button-toggle value="ro"
+                         [checked]="isRoSelected">
+        <span class="flag-icon flag-icon-ro"></span>
+      </mat-button-toggle>
+      <mat-button-toggle value="en"
+                         [checked]="!isRoSelected">
+        <span class="flag-icon flag-icon-gb"></span>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <div class="buttons-container">
+      <button mat-stroked-button
+              (click)="goBack()">
+        {{'back' | translate}}
+      </button>
+      <button mat-raised-button
+              [disabled]="!isFormChangedAndValid"
+              color="primary"
+              (click)="onSubmit()">
+        {{'save' | translate}}
+      </button>
+    </div>
+  </form>
+</mat-card>

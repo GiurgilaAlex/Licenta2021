@@ -1,0 +1,45 @@
+<div class="ask-me-container">
+	<div class="upper">
+		<h2 class="title">
+			{{'askMe' | translate}}
+		</h2>
+		<div class="description">
+			{{'askMeDescription' | translate}}
+		</div>
+		<div>
+			{{finishedAskingQuestion ? ('whatIUnderstood' | translate) + voiceRecognitionService.text : ''}}
+		</div>
+		<div>
+			<mat-form-field appearance="fill">
+				<mat-label>{{'chooseDate' | translate}}</mat-label>
+				<input matInput
+							 [matDatepicker]="picker"
+							 [(ngModel)]="datepicker">
+				<mat-datepicker-toggle matSuffix
+															 [for]="picker"></mat-datepicker-toggle>
+				<mat-datepicker #picker></mat-datepicker>
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="content">
+		<button class="mic-button"
+						mat-fab
+						color="primary"
+						(touchstart)="startService()"
+						(touchend)="stopService()">
+			<mat-icon class="mic-icon">mic</mat-icon>
+		</button>
+
+		<div class="answer-container">
+			<agm-map *ngIf="finishedAskingQuestion && foundLocation"
+							 [latitude]="lat"
+							 [longitude]="lng">
+				<agm-marker [latitude]="lat"
+										[longitude]="lng"></agm-marker>
+			</agm-map>
+			<div *ngIf="finishedAskingQuestion && !foundLocation">
+				{{'sorryCoundNotFindSomething' | translate}}
+			</div>
+		</div>
+	</div>
+</div>

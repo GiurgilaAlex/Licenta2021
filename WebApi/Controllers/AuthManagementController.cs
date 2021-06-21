@@ -31,7 +31,7 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> Register([FromBody] UserRegistrationDto user)
+        public async Task<IActionResult> Register([FromBody] UserLoginRequest user)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +49,7 @@ namespace WebApi.Controllers
                     });
                 }
 
-                var newUser = new IdentityUser() { Email = user.Email, UserName = user.Username };
+                var newUser = new IdentityUser() { Email = user.Email };
                 var isCreated = await _userManager.CreateAsync(newUser, user.Password);
                 if (isCreated.Succeeded)
                 {

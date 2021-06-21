@@ -1,0 +1,10 @@
+<mat-card class="card-container"
+          (click)="goToDetails()">
+  <div class="top-side">
+    <div class="title">{{note?.title | translate}}</div>
+    <div>{{note?.createdAt}}</div>
+  </div>
+  <div class="bottom-side">
+    <p class="description">{{note?.description | translate}}</p>
+  </div>
+</mat-card>

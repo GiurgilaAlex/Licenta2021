@@ -10,6 +10,7 @@ namespace BusinessLogic
         {
             services.AddScoped<INoteLogic, NoteLogic>();
             services.AddScoped<IAskMeLogic, AskMeLogic>();
+            services.AddScoped<IProfileLogic, ProfileLogic>();
         }
     }
 }

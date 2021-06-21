@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar-container">
+  <div class="header-container">
+    <div class="left-side">
+      <button mat-icon-button
+              class="marin-right"
+              (click)="goHome()">
+        <img [src]="'assets/icons/logo.svg'">
+        Mnemosyne
+      </button>
+
+    </div>
+    <div class="right-side"
+         (click)="goToProfile()">
+      <div class="user">
+        {{data?.name}}
+      </div>
+      <img class="img-placeholder"
+           [src]="data?.image ? data?.image : 'assets/icons/image-placeholder.png'">
+    </div>
+  </div>
+</mat-toolbar>
